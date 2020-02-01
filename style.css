@@ -66,6 +66,7 @@ h1, h3 {
 
 h2 {
   font-size: 1.6em;
+  margin-bottom: 15px;
 }
 
 h4{
@@ -76,6 +77,157 @@ h4{
   font-size: 1.1em;
 }
 
+/* mobile styles */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.site-nav{
+  margin: 0 20px;
+}
+
+.site-nav ul {
+  display: none;
+}
+
+.site-nav h1{
+  grid-column: 1/4;
+  grid-row: 1;
+  padding: 10px 0;
+  border-bottom: 3px solid var(--primary);
+}
+
+#welcome {
+  padding: 20px;
+}
+
+.welcome-text{
+  grid-column: 1/6;
+}
+
+.welcome-text a {
+  margin: 20px 0;
+}
+
+.welcome-img{
+  grid-column: 6/9;
+}
+
+.welcome-img img {
+  width: 200%;
+}
+
+#portfolio{
+  background-image: url('assets/square_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 20px;
+}
+
+#portfolio h3 {
+  text-align: center;
+}
+
+.projects a {
+  grid-column: 1/9;
+  margin: 20px 0;
+  display: flex;
+}
+
+.projects a * {
+  margin: 0 20px;
+  max-width: 40%;
+  align-self: center;
+}
+
+.projects h4 {
+  color: var(--tertiary);
+}
+
+#skills {
+  padding: 30px 20px;
+  background-color: var(--secondary);
+}
+
+#skills h3 {
+  text-align: center;
+}
+
+#skills ul{
+  margin: 40px 0;
+}
+
+#skills li {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+  text-align: center;
+}
+
+#skills img {
+  height: 80px;
+  margin: 10px auto;
+}
+
+#contact {
+  padding: 30px 20px;
+  background-color: var(--secondary);
+}
+
+#contact h3, #contact p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#contact form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#contact input, #contact textarea{
+  width: 100%;
+  margin: 10px 0;
+}
+
+#contact button {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 30px 20px;
+  background-color: #14153D;
+  background-image: url('assets/footer_image.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+footer .copyright {
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+
+footer .social {
+  grid-column: 7/9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer li {
+  margin: 0 6px;
+}
+
+footer img {
+  width: 20px;
+}
+
+
 /* small tablet styles */
 @media screen and (min-width: 620px){
 
@@ -83,7 +235,6 @@ h4{
 
 /* large tablets & laptop styles */
 @media screen and (min-width: 960px){
-
   body {
     font-size: 18px;
   }
@@ -91,7 +242,6 @@ h4{
 
 /* destop styles */
 @media screen and (min-width: 1200px){
-
   body {
     font-size: 20px;
   }
